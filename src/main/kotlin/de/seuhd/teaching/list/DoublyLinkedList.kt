@@ -95,8 +95,8 @@ class DoublyLinkedList {
      * Returns the value at position [index].
      */
     fun get(index: Int): Double {
-        if (index < 0) throw IndexOutOfBoundsException()
-        if (index >= length) throw IndexOutOfBoundsException()
+        if (index < 0) throw IndexOutOfBoundsException("Index darf nicht negativ sein")
+        if (index >= length) throw IndexOutOfBoundsException("Index darf nicht größer als Länge sein")
         var element = begin
         repeat(index) { element = element!!.next }
         return element!!.value
